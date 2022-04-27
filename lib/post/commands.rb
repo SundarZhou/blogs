@@ -7,3 +7,8 @@ class PublishPost < Sequent::Command
   attrs publication_date: DateTime
   validates_presence_of :publication_date
 end
+
+class EditPost < Sequent::Command
+  attrs title: String, content: String
+  validates_presence_of :title, :content
+end

@@ -1,6 +1,6 @@
 require 'sequent/migrations/projectors'
 
-VIEW_SCHEMA_VERSION = 2
+VIEW_SCHEMA_VERSION = 5
 
 class Migrations < Sequent::Migrations::Projectors
   def self.version
@@ -14,7 +14,10 @@ class Migrations < Sequent::Migrations::Projectors
       ],
       '2' => [ # <= add here which projectors you want to rebuild
         AuthorProjector
-      ]
+      ],
+      '3' => [
+        PostProjector
+      ],
     }
   end
 end
